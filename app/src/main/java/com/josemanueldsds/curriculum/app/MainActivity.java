@@ -23,6 +23,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         super.onCreate(savedInstanceState);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
+        navigation.getMenu().clear();
         navigation.inflateMenu(R.menu.navigation);
         BottomNavigationViewHelper.disableShiftMode(navigation);
         changeFragment(ProfileFragment.newInstance(), FragmentTransactionType.REPLACE, true);
