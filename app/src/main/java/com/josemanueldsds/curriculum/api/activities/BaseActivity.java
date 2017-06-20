@@ -309,7 +309,6 @@ public abstract class BaseActivity extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction()
                             .setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
                             .replace(getFragmentContainerId(), fragment, fragment.getClass().getSimpleName())
-                            .addToBackStack(getActiveFragment().getClass().getSimpleName())
                             .commit();
                     break;
             }
